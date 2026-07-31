@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Global & Layout Styles
+   ========================================================================== */
+:root {
+    --primary-color: #2b6cb0;
+    --primary-hover: #2c5282;
+    --bg-light: #f8f9fa;
+    --card-radius: 12px;
+    --shadow-subtle: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+    color: #2d3748;
+}
+
+/* ==========================================================================
+   Cards & Sections
+   ========================================================================== */
+.hero-card,
+.form-section,
+.card-custom {
+    border: none;
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow-subtle);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-custom:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* ==========================================================================
+   Form Controls & Buttons
+   ========================================================================== */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 1px solid #cbd5e0;
+    padding: 0.6rem 0.9rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.25rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   Results & Metrics Cards
+   ========================================================================== */
+.metric-card {
+    border-left: 4px solid var(--primary-color);
+}
+
+.metric-card.danger {
+    border-left-color: #e53e3e;
+}
+
+.metric-card.warning {
+    border-left-color: #dd6b20;
+}
+
+.metric-card.success {
+    border-left-color: #38a169;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.status-sam {
+    background-color: #fed7d7;
+    color: #9b2c2c;
+}
+
+.status-mam {
+    background-color: #feebc8;
+    color: #9c4221;
+}
+
+.status-normal {
+    background-color: #c6f6d5;
+    color: #22543d;
+}
